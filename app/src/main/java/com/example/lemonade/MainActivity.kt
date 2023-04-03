@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
 fun LemonadeApp() {
     Surface(
         modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colors.background
+        color = Color.White
     ) {
         var step by remember {
             mutableStateOf(1)
@@ -77,15 +77,14 @@ fun LemonadeApp() {
                         Color(105, 205, 216),
                         RoundedCornerShape(5.dp)
                     )
+                    .padding(16.dp)
                     .clickable {
                         when (step) {
                             1, 3 -> {
                                 step++
                             }
                             2 -> {
-                                println(random)
                                 random--
-                                println(random)
                                 if (random == 0) {
                                     step++
                                 }
